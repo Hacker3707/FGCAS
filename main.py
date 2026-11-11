@@ -28,3 +28,8 @@ for u, v in dependencies:
 
 print("Valid DAG:", dag.validate_dag())
 print("Topological order:", dag.topological_sort())
+
+es = dag.calculate_es()
+
+for task_id, start in es.items():
+    print(f"{task_id}: ES = {start}")

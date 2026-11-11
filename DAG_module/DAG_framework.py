@@ -92,3 +92,49 @@ class DAG:
                 dfs(task_id)
 
         return stack[::-1]
+
+    
+    def calculate_es(self):
+        # Ensure the graph is a valid DAG
+        if not self.validate_dag():
+            raise ValueError("Cannot calculate ES: cycle detected")
+
+        # Get topological order
+        order = self.topological_sort()
+
+        es = {}
+
+        # Calculate ES in topological order
+        for task_id in order:
+            task = self.tasks[task_id]
+
+            if not task.predecessors:
+                es[task_id] = task.release_time
+
+            else:
+                predecessor_finish = max(
+                    es[pred] + self.tasks[pred].duration
+                    for pred in task.predecessors
+                )
+
+                es[task_id] = max(
+                    task.release_time,
+                    predecessor_finish
+                )
+
+        return es
+
+    # Calculate Latest Start.
+    def calculate_ls():
+        pass
+
+    # Calculate Slack.
+    def calculate_slack():
+        pass
+
+    # Calculate Tail Length.
+    def calculate_tail_length():
+        pass
+
+
+        
