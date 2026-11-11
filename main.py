@@ -1,30 +1,22 @@
-from dag_module.dag_framework import DAG, Task
+from src.fgcas.dag import DAG, Task
 
-dag = DAG()
+dag = DAG(
+    time_unit="hour",
+    project_delay=0,
+    slack_threshold=2
+)
 
-tasks = [
-    Task("T1", 2),
-    Task("T2", 3),
-    Task("T3", 1),
-    Task("T4", 2),
-    Task("T5", 2),
-    Task("T6", 1)
-]
+dag.add_task(Task("A", 3))
+dag.add_task(Task("B", 2))
+dag.add_task(Task("C", 5))
+dag.add_task(Task("D", 4))
 
-for task in tasks:
-    dag.add_task(task)
+dag.add_dependency("A", "B")
+dag.add_dependency("A", "C")
+dag.add_dependency("B", "D")
+dag.add_dependency("C", "D")
 
-dependencies = [
-    ("T1", "T2"),
-    ("T1", "T3"),
-    ("T2", "T4"),
-    ("T3", "T5"),
-    ("T4", "T6"),
-    ("T5", "T6")
-]
-
-for u, v in dependencies:
-    dag.add_dependency(u, v)
-
-print("Valid DAG:", dag.validate_dag())
-print("Topological order:", dag.topological_sort())
+print("ES:", dag.calculate_es())
+print("LS:", dag.calculate_ls())
+print("Slack:", dag.calculate_slack())
+print("Classification:", dag.classify_slack())

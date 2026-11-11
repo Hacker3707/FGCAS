@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/fgcas/dag.py
+src/fgcas.egg-info/PKG-INFO
+src/fgcas.egg-info/SOURCES.txt
+src/fgcas.egg-info/dependency_links.txt
+src/fgcas.egg-info/requires.txt
+src/fgcas.egg-info/top_level.txt
+tests/test_dag.py
