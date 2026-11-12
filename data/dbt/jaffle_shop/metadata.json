@@ -1,0 +1,13 @@
+{
+  "project": "jaffle_shop",
+  "url": "https://github.com/dbt-labs/jaffle_shop",
+  "commit_sha": "5beb145b00f5465ec759cfcdd9745e858818cf95",
+  "dbt_version": "2.0.11",
+  "model_nodes": 13,
+  "model_edges": 11,
+  "weakly_connected_components": 3,
+  "isolated_nodes": 1,
+  "is_dag": true,
+  "benchmark_category": "small",
+  "license": "unknown"
+}
