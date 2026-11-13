@@ -2,7 +2,7 @@
 import json
 from collections import Counter
 
-with open("dbt_amazon_ads/target/manifest.json", encoding="utf-8") as f:
+with open("spellbook/dbt_subprojects/solana/target/manifest.json", encoding="utf-8") as f:
     manifest = json.load(f)
 
 nodes = manifest["nodes"]
@@ -43,7 +43,7 @@ G.add_nodes_from(models)
 G.add_edges_from(edges)
 
 print("\nIs DAG:", nx.is_directed_acyclic_graph(G))
-print("Connected components:",
+print("Weakly Connected components:",
       nx.number_weakly_connected_components(G))
 
 print("Isolated nodes:", list(nx.isolates(G)))
