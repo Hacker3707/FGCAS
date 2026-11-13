@@ -1,0 +1,4586 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "name": "spellbook",
+    "repository": "https://github.com/duneanalytics/spellbook",
+    "git_url": "https://github.com/duneanalytics/spellbook.git",
+    "commit_sha": "4f05d6e761be4dfdb096159bffdea529cf4966c8",
+    "license": "Business Source License 1.1",
+    "license_copyright": "Copyright (c) 2017 MariaDB Corporation Ab",
+    "last_updated": "2026-10-28",
+    "subprojects": {
+      "solana": {
+        "metadata": {
+          "name": "solana",
+          "dbt_core_version": null,
+          "dbt_adapter": "dbt-trino",
+          "dbt_trino_version": null,
+          "parsed_at": null,
+          "profile": "spellbook-local",
+          "dbt_version_requirement": ">=1.8.0",
+          "reported_model_count_in_user_metadata": 30,
+          "parsed_model_count": 264,
+          "model_count_note": "The supplied metadata table reports 30 models, while the Solana manifest parser output contains 264 model nodes. Both values are retained pending verification of what the 30-model figure refers to."
+        },
+        "graph": {
+          "source": "dbt target/manifest.json",
+          "node_filter": "resource_type == model",
+          "edge_direction": "predecessor_to_successor",
+          "node_count": 264,
+          "edge_count": 315,
+          "is_dag": true,
+          "weakly_connected_components": 27,
+          "isolated_node_count": 17,
+          "isolated_nodes": [
+            "model.solana.bloom_solana_bot_trades",
+            "model.solana.cswap_solana_bot_trades",
+            "model.solana.hivemapper_solana_rewards",
+            "model.solana.jupiter_solana_perp_events",
+            "model.solana.monitoring_config_spellbook_solana",
+            "model.solana.nova_solana_bot_trades",
+            "model.solana.opensea_solana_events",
+            "model.solana.sanctum_router_base_trades",
+            "model.solana.solana_dev_table",
+            "model.solana.solana_dev_view",
+            "model.solana.solana_utils_sns_domains",
+            "model.solana.tokens_solana_fees_history",
+            "model.solana.tokens_solana_net_transfers_daily",
+            "model.solana.tokens_solana_net_transfers_daily_asset",
+            "model.solana.tokens_solana_nft",
+            "model.solana.tokens_solana_stablecoins",
+            "model.solana.unibot_solana_bot_trades"
+          ],
+          "max_in_degree": 37,
+          "max_out_degree": 39,
+          "longest_path": {
+            "node_count": 8,
+            "edge_count": 7,
+            "nodes": [
+              "meteora_v1_solana_stg_swaps",
+              "meteora_v1_solana_base_trades_backfill",
+              "meteora_v1_solana_base_trades",
+              "meteora_version_amm_base_trades",
+              "dex_solana_base_trades",
+              "dex_solana_stg_max_block_slot",
+              "dex_solana_trades",
+              "humidifi_solana_trades"
+            ],
+            "note": "Unweighted longest path; not duration-based critical path."
+          },
+          "generations": [
+            {
+              "level": 0,
+              "node_count": 101,
+              "nodes": [
+                "alpha_dex_solana_bot_users",
+                "alphaq_solana_stg_raw_swaps",
+                "aquifer_solana_stg_raw_swaps",
+                "aquifer_v2_solana_stg_raw_swaps",
+                "autosnipe_solana_bot_trades",
+                "banana_gun_solana_bot_trades",
+                "base_app_swapper_solana_stg_sol_payments",
+                "base_app_swapper_solana_stg_token_payments_fees_claimed",
+                "base_app_swapper_solana_stg_token_payments_fees_paid",
+                "bisonfi_solana_stg_raw_swaps",
+                "bitfoot_solana_bot_trades",
+                "bloom_solana_bot_trades",
+                "bonkbot_solana_fee_payments_raw",
+                "byreal_solana_stg_raw_swaps",
+                "consortium_key_solana_bot_users",
+                "cswap_solana_bot_trades",
+                "falcon_solana_bot_trades",
+                "gas_solana_compute_limit",
+                "gas_solana_compute_unit_price",
+                "goonfi_solana_stg_raw_swaps",
+                "goonfi_v2_solana_stg_raw_swaps",
+                "goosefx_ssl_v2_solana_base_trades_backfill",
+                "hivemapper_solana_rewards",
+                "humidifi_solana_stg_raw_swaps",
+                "jupbot_solana_bot_trades",
+                "jupiter_lend_solana_stg_decoded_swaps",
+                "jupiter_solana_amms",
+                "jupiter_solana_perp_events",
+                "jupiterz_solana_base_trades",
+                "lifinity_v1_stg_swaps",
+                "lifinity_v2_stg_swaps",
+                "looter_solana_bot_trades",
+                "maestro_solana_bot_trades",
+                "magiceden_mmm_solana_trades",
+                "magiceden_solana_events",
+                "magiceden_v2_solana_trades",
+                "magiceden_v3_solana_trades",
+                "magnum_solana_bot_trades",
+                "manifest_solana_stg_raw_swaps",
+                "meteora_v1_solana_stg_swaps",
+                "meteora_v2_solana_base_trades",
+                "meteora_v3_solana_excluded_mints",
+                "meteora_v4_solana_base_trades",
+                "mev_x_solana_bot_trades",
+                "monitoring_config_spellbook_solana",
+                "nova_solana_bot_trades",
+                "obric_solana_stg_raw_swaps",
+                "oneinch_solana_fusion_created_orders",
+                "oneinch_solana_transactions",
+                "oneinch_solana_transfers",
+                "opensea_solana_events",
+                "orca_whirlpool_stg_swaps",
+                "orca_whirlpool_v2_token_transfers",
+                "padre_solana_bot_users",
+                "pancakeswap_v3_solana_stg_swaps",
+                "pepe_boost_solana_bot_trades",
+                "phantom_swapper_solana_fee_addresses",
+                "phoenix_v1_base_trades",
+                "pinkpunk_solana_bot_trades",
+                "prophetbots_solana_bot_trades",
+                "pumpdotfun_solana_base_trades",
+                "pumpswap_solana_pools",
+                "pumpswap_solana_stg_decoded_swaps",
+                "raydium_launchlab_v1_stg_swaps",
+                "raydium_v3_base_trades_backfill",
+                "raydium_v4_solana_stg_decoded_swaps",
+                "raydium_v5_solana_stg_decoded_swaps",
+                "readyswap_solana_bot_trades",
+                "sanctum_router_base_trades",
+                "sanji_solana_bot_trades",
+                "scorch_solana_stg_raw_swaps",
+                "shuriken_solana_bot_trades",
+                "sol_gun_solana_bot_trades",
+                "sol_trading_bot_solana_bot_trades",
+                "solana_dev_table",
+                "solana_dev_view",
+                "solana_utils_block_leaders",
+                "solana_utils_daily_balances",
+                "solana_utils_epochs",
+                "solana_utils_sns_domains",
+                "solana_utils_token_accounts",
+                "solfi_solana_token_transfers",
+                "solfi_v2_solana_stg_raw_swaps",
+                "soul_sniper_solana_bot_users",
+                "stabble_solana_stg_decoded_swaps",
+                "staking_solana_stake_actions",
+                "tensorswap_v1_solana_trades",
+                "tensorswap_v2_solana_trades",
+                "tessera_solana_stg_raw_swaps",
+                "tirador_solana_bot_trades",
+                "tokens_solana_fees_history",
+                "tokens_solana_net_transfers_daily",
+                "tokens_solana_net_transfers_daily_asset",
+                "tokens_solana_nft",
+                "tokens_solana_stablecoins",
+                "tradewiz_solana_bot_trades",
+                "trojan_solana_bot_trades",
+                "unibot_solana_bot_trades",
+                "whalestreet_solana_stg_raw_swaps",
+                "wifbot_solana_bot_trades",
+                "zerofi_solana_stg_raw_swaps"
+              ]
+            },
+            {
+              "level": 1,
+              "node_count": 84,
+              "nodes": [
+                "alpha_dex_solana_bot_trades",
+                "alphaq_solana_base_trades",
+                "aquifer_solana_base_trades",
+                "aquifer_v2_solana_base_trades",
+                "base_app_swapper_solana_stg_token_payments",
+                "bisonfi_solana_base_trades",
+                "bonkbot_solana_fee_token_prices",
+                "byreal_solana_base_trades",
+                "consortium_key_solana_bot_trades",
+                "gas_solana_tx_fees_2020_q4",
+                "gas_solana_tx_fees_2021_q1",
+                "gas_solana_tx_fees_2021_q2",
+                "gas_solana_tx_fees_2021_q3",
+                "gas_solana_tx_fees_2021_q4",
+                "gas_solana_tx_fees_2022_q1",
+                "gas_solana_tx_fees_2022_q2",
+                "gas_solana_tx_fees_2022_q3",
+                "gas_solana_tx_fees_2022_q4",
+                "gas_solana_tx_fees_2023_q1",
+                "gas_solana_tx_fees_2023_q2",
+                "gas_solana_tx_fees_2023_q3",
+                "gas_solana_tx_fees_2023_q4",
+                "gas_solana_tx_fees_2024_q1",
+                "gas_solana_tx_fees_2024_q2",
+                "gas_solana_tx_fees_2024_q3",
+                "gas_solana_tx_fees_2024_q4",
+                "gas_solana_tx_fees_current",
+                "gas_solana_vote_fees_2020_q4",
+                "gas_solana_vote_fees_2021_q1",
+                "gas_solana_vote_fees_2021_q2",
+                "gas_solana_vote_fees_2021_q3",
+                "gas_solana_vote_fees_2021_q4",
+                "gas_solana_vote_fees_2022_q1",
+                "gas_solana_vote_fees_2022_q2",
+                "gas_solana_vote_fees_2022_q3",
+                "gas_solana_vote_fees_2022_q4",
+                "gas_solana_vote_fees_2023_q1",
+                "gas_solana_vote_fees_2023_q2",
+                "gas_solana_vote_fees_2023_q3",
+                "gas_solana_vote_fees_2023_q4",
+                "gas_solana_vote_fees_2024_q1",
+                "gas_solana_vote_fees_2024_q2",
+                "gas_solana_vote_fees_2024_q3",
+                "gas_solana_vote_fees_current",
+                "goonfi_solana_base_trades",
+                "goonfi_v2_solana_base_trades",
+                "goosefx_ssl_v2_solana_base_trades",
+                "humidifi_solana_base_trades",
+                "jupiter_lend_solana_base_trades",
+                "jupiter_v4_solana_aggregator_swaps",
+                "jupiter_v5_solana_aggregator_swaps",
+                "jupiter_v6_solana_aggregator_swaps",
+                "jupiter_v6_solana_swapsevent_aggregator_swaps",
+                "lifinity_v1_base_trades",
+                "lifinity_v2_base_trades",
+                "manifest_solana_base_trades",
+                "meteora_v1_solana_base_trades_backfill",
+                "meteora_v3_solana_base_trades",
+                "meteora_version_dlmm_base_trades",
+                "nft_solana_old_trades",
+                "obric_solana_base_trades",
+                "oneinch_solana_swaps",
+                "orca_whirlpool_base_trades_backfill",
+                "orca_whirlpool_v2_stg_swaps",
+                "padre_solana_bot_trades",
+                "pancakeswap_v3_solana_base_trades",
+                "phantom_swapper_solana_fee_payments_raw",
+                "phoenix_version_1_base_trades",
+                "pumpdotfun_version_1_base_trades",
+                "pumpswap_solana_base_trades_backfill",
+                "raydium_launchlab_v1_base_trades",
+                "raydium_v3_base_trades",
+                "raydium_v4_base_trades_backfill",
+                "raydium_v5_base_trades_backfill",
+                "scorch_solana_base_trades",
+                "solana_utils_latest_balances",
+                "solfi_solana_base_trades",
+                "solfi_v2_solana_base_trades",
+                "soul_sniper_solana_bot_trades",
+                "stabble_solana_base_trades_backfill",
+                "staking_solana_stake_account_delegations",
+                "tessera_solana_base_trades",
+                "whalestreet_solana_base_trades",
+                "zerofi_solana_base_trades"
+              ]
+            },
+            {
+              "level": 2,
+              "node_count": 23,
+              "nodes": [
+                "base_app_swapper_solana_fee_payments_raw",
+                "bonkbot_solana_fee_payments_usd",
+                "gas_solana_tx_fees",
+                "gas_solana_vote_fees",
+                "goosefx_version_ssl_base_trades",
+                "jupiter_solana_aggregator_swaps",
+                "lifinity_version_v1_base_trades",
+                "lifinity_version_v2_base_trades",
+                "meteora_v1_solana_base_trades",
+                "meteora_version_cpamm_base_trades",
+                "nft_solana_trades",
+                "orca_whirlpool_base_trades",
+                "orca_whirlpool_v2_base_trades",
+                "pancakeswap_version_v3_base_trades",
+                "phantom_swapper_solana_fee_token_prices",
+                "pumpswap_solana_base_trades",
+                "raydium_launchlab_version_1_base_trades",
+                "raydium_v4_base_trades",
+                "raydium_v5_base_trades",
+                "raydium_version_clmm_base_trades",
+                "solfi_version_1_base_trades",
+                "stabble_solana_base_trades",
+                "staking_solana_validator_stake_account_epochs_raw"
+              ]
+            },
+            {
+              "level": 3,
+              "node_count": 10,
+              "nodes": [
+                "base_app_swapper_solana_fee_token_prices",
+                "bonkbot_solana_bot_trades",
+                "gas_solana_fees",
+                "meteora_version_amm_base_trades",
+                "orca_whirlpool_version_v1_base_trades",
+                "orca_whirlpool_version_v2_base_trades",
+                "phantom_swapper_solana_fee_payments_usd",
+                "pumpswap_version_1_base_trades",
+                "stabble_version_1_base_trades",
+                "staking_solana_validator_stake_account_epochs"
+              ]
+            },
+            {
+              "level": 4,
+              "node_count": 4,
+              "nodes": [
+                "base_app_swapper_solana_fee_payments_usd",
+                "dex_solana_base_trades",
+                "dex_solana_bot_trades",
+                "phantom_swapper_solana_trades"
+              ]
+            },
+            {
+              "level": 5,
+              "node_count": 2,
+              "nodes": [
+                "base_app_swapper_solana_trades",
+                "dex_solana_stg_max_block_slot"
+              ]
+            },
+            {
+              "level": 6,
+              "node_count": 1,
+              "nodes": [
+                "dex_solana_trades"
+              ]
+            },
+            {
+              "level": 7,
+              "node_count": 39,
+              "nodes": [
+                "alphaq_solana_trades",
+                "aquifer_solana_trades",
+                "aquifer_v2_solana_trades",
+                "bisonfi_solana_trades",
+                "byreal_solana_trades",
+                "dex_solana_price_hour",
+                "goonfi_solana_trades",
+                "goonfi_v2_solana_trades",
+                "goosefx_ssl_v2_solana_trades",
+                "humidifi_solana_trades",
+                "jupiter_lend_solana_trades",
+                "jupiterz_solana_trades",
+                "lifinity_v1_trades",
+                "lifinity_v2_trades",
+                "manifest_solana_trades",
+                "meteora_v1_solana_trades",
+                "meteora_v2_solana_trades",
+                "meteora_v3_solana_trades",
+                "meteora_v4_solana_trades",
+                "obric_solana_trades",
+                "orca_whirlpool_token_prices",
+                "orca_whirlpool_token_prices_hour",
+                "orca_whirlpool_trades",
+                "pancakeswap_v3_solana_trades",
+                "phoenix_v1_trades",
+                "pumpdotfun_solana_trades",
+                "pumpswap_solana_trades",
+                "raydium_launchlab_v1_trades",
+                "raydium_v3_trades",
+                "raydium_v4_trades",
+                "raydium_v5_trades",
+                "sanctum_router_trades",
+                "scorch_solana_trades",
+                "solfi_solana_trades",
+                "solfi_v2_solana_trades",
+                "stabble_solana_trades",
+                "tessera_solana_trades",
+                "whalestreet_solana_trades",
+                "zerofi_solana_trades"
+              ]
+            }
+          ],
+          "generation_widths": [
+            101,
+            84,
+            23,
+            10,
+            4,
+            2,
+            1,
+            39
+          ],
+          "max_generation_width": 101,
+          "nodes": [
+            {
+              "id": "model.solana.alpha_dex_solana_bot_trades",
+              "name": "alpha_dex_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.alpha_dex_solana_bot_users",
+              "name": "alpha_dex_solana_bot_users",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.alphaq_solana_base_trades",
+              "name": "alphaq_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.alphaq_solana_stg_raw_swaps",
+              "name": "alphaq_solana_stg_raw_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.alphaq_solana_trades",
+              "name": "alphaq_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.aquifer_solana_base_trades",
+              "name": "aquifer_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.aquifer_solana_stg_raw_swaps",
+              "name": "aquifer_solana_stg_raw_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.aquifer_solana_trades",
+              "name": "aquifer_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.aquifer_v2_solana_base_trades",
+              "name": "aquifer_v2_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.aquifer_v2_solana_stg_raw_swaps",
+              "name": "aquifer_v2_solana_stg_raw_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.aquifer_v2_solana_trades",
+              "name": "aquifer_v2_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.autosnipe_solana_bot_trades",
+              "name": "autosnipe_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.banana_gun_solana_bot_trades",
+              "name": "banana_gun_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.base_app_swapper_solana_fee_payments_raw",
+              "name": "base_app_swapper_solana_fee_payments_raw",
+              "resource_type": "model",
+              "in_degree": 2,
+              "out_degree": 2,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.base_app_swapper_solana_fee_payments_usd",
+              "name": "base_app_swapper_solana_fee_payments_usd",
+              "resource_type": "model",
+              "in_degree": 2,
+              "out_degree": 1,
+              "generation": 4,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.base_app_swapper_solana_fee_token_prices",
+              "name": "base_app_swapper_solana_fee_token_prices",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 3,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.base_app_swapper_solana_stg_sol_payments",
+              "name": "base_app_swapper_solana_stg_sol_payments",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.base_app_swapper_solana_stg_token_payments",
+              "name": "base_app_swapper_solana_stg_token_payments",
+              "resource_type": "model",
+              "in_degree": 2,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.base_app_swapper_solana_stg_token_payments_fees_claimed",
+              "name": "base_app_swapper_solana_stg_token_payments_fees_claimed",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.base_app_swapper_solana_stg_token_payments_fees_paid",
+              "name": "base_app_swapper_solana_stg_token_payments_fees_paid",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.base_app_swapper_solana_trades",
+              "name": "base_app_swapper_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 5,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.bisonfi_solana_base_trades",
+              "name": "bisonfi_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.bisonfi_solana_stg_raw_swaps",
+              "name": "bisonfi_solana_stg_raw_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.bisonfi_solana_trades",
+              "name": "bisonfi_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.bitfoot_solana_bot_trades",
+              "name": "bitfoot_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.bloom_solana_bot_trades",
+              "name": "bloom_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.bonkbot_solana_bot_trades",
+              "name": "bonkbot_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 3,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.bonkbot_solana_fee_payments_raw",
+              "name": "bonkbot_solana_fee_payments_raw",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 2,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.bonkbot_solana_fee_payments_usd",
+              "name": "bonkbot_solana_fee_payments_usd",
+              "resource_type": "model",
+              "in_degree": 2,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.bonkbot_solana_fee_token_prices",
+              "name": "bonkbot_solana_fee_token_prices",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.byreal_solana_base_trades",
+              "name": "byreal_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.byreal_solana_stg_raw_swaps",
+              "name": "byreal_solana_stg_raw_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.byreal_solana_trades",
+              "name": "byreal_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.consortium_key_solana_bot_trades",
+              "name": "consortium_key_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.consortium_key_solana_bot_users",
+              "name": "consortium_key_solana_bot_users",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.cswap_solana_bot_trades",
+              "name": "cswap_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.dex_solana_base_trades",
+              "name": "dex_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 37,
+              "out_degree": 2,
+              "generation": 4,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.dex_solana_bot_trades",
+              "name": "dex_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 25,
+              "out_degree": 0,
+              "generation": 4,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.dex_solana_price_hour",
+              "name": "dex_solana_price_hour",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.dex_solana_stg_max_block_slot",
+              "name": "dex_solana_stg_max_block_slot",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 5,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.dex_solana_trades",
+              "name": "dex_solana_trades",
+              "resource_type": "model",
+              "in_degree": 2,
+              "out_degree": 39,
+              "generation": 6,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.falcon_solana_bot_trades",
+              "name": "falcon_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_compute_limit",
+              "name": "gas_solana_compute_limit",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 18,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_compute_unit_price",
+              "name": "gas_solana_compute_unit_price",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 18,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_fees",
+              "name": "gas_solana_fees",
+              "resource_type": "model",
+              "in_degree": 2,
+              "out_degree": 0,
+              "generation": 3,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees",
+              "name": "gas_solana_tx_fees",
+              "resource_type": "model",
+              "in_degree": 18,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2020_q4",
+              "name": "gas_solana_tx_fees_2020_q4",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2021_q1",
+              "name": "gas_solana_tx_fees_2021_q1",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2021_q2",
+              "name": "gas_solana_tx_fees_2021_q2",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2021_q3",
+              "name": "gas_solana_tx_fees_2021_q3",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2021_q4",
+              "name": "gas_solana_tx_fees_2021_q4",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2022_q1",
+              "name": "gas_solana_tx_fees_2022_q1",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2022_q2",
+              "name": "gas_solana_tx_fees_2022_q2",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2022_q3",
+              "name": "gas_solana_tx_fees_2022_q3",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2022_q4",
+              "name": "gas_solana_tx_fees_2022_q4",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2023_q1",
+              "name": "gas_solana_tx_fees_2023_q1",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2023_q2",
+              "name": "gas_solana_tx_fees_2023_q2",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2023_q3",
+              "name": "gas_solana_tx_fees_2023_q3",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2023_q4",
+              "name": "gas_solana_tx_fees_2023_q4",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2024_q1",
+              "name": "gas_solana_tx_fees_2024_q1",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2024_q2",
+              "name": "gas_solana_tx_fees_2024_q2",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2024_q3",
+              "name": "gas_solana_tx_fees_2024_q3",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_2024_q4",
+              "name": "gas_solana_tx_fees_2024_q4",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_tx_fees_current",
+              "name": "gas_solana_tx_fees_current",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees",
+              "name": "gas_solana_vote_fees",
+              "resource_type": "model",
+              "in_degree": 17,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2020_q4",
+              "name": "gas_solana_vote_fees_2020_q4",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2021_q1",
+              "name": "gas_solana_vote_fees_2021_q1",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2021_q2",
+              "name": "gas_solana_vote_fees_2021_q2",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2021_q3",
+              "name": "gas_solana_vote_fees_2021_q3",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2021_q4",
+              "name": "gas_solana_vote_fees_2021_q4",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2022_q1",
+              "name": "gas_solana_vote_fees_2022_q1",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2022_q2",
+              "name": "gas_solana_vote_fees_2022_q2",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2022_q3",
+              "name": "gas_solana_vote_fees_2022_q3",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2022_q4",
+              "name": "gas_solana_vote_fees_2022_q4",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2023_q1",
+              "name": "gas_solana_vote_fees_2023_q1",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2023_q2",
+              "name": "gas_solana_vote_fees_2023_q2",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2023_q3",
+              "name": "gas_solana_vote_fees_2023_q3",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2023_q4",
+              "name": "gas_solana_vote_fees_2023_q4",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2024_q1",
+              "name": "gas_solana_vote_fees_2024_q1",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2024_q2",
+              "name": "gas_solana_vote_fees_2024_q2",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_2024_q3",
+              "name": "gas_solana_vote_fees_2024_q3",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.gas_solana_vote_fees_current",
+              "name": "gas_solana_vote_fees_current",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.goonfi_solana_base_trades",
+              "name": "goonfi_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.goonfi_solana_stg_raw_swaps",
+              "name": "goonfi_solana_stg_raw_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.goonfi_solana_trades",
+              "name": "goonfi_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.goonfi_v2_solana_base_trades",
+              "name": "goonfi_v2_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.goonfi_v2_solana_stg_raw_swaps",
+              "name": "goonfi_v2_solana_stg_raw_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.goonfi_v2_solana_trades",
+              "name": "goonfi_v2_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.goosefx_ssl_v2_solana_base_trades",
+              "name": "goosefx_ssl_v2_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.goosefx_ssl_v2_solana_base_trades_backfill",
+              "name": "goosefx_ssl_v2_solana_base_trades_backfill",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.goosefx_ssl_v2_solana_trades",
+              "name": "goosefx_ssl_v2_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.goosefx_version_ssl_base_trades",
+              "name": "goosefx_version_ssl_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.hivemapper_solana_rewards",
+              "name": "hivemapper_solana_rewards",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.humidifi_solana_base_trades",
+              "name": "humidifi_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.humidifi_solana_stg_raw_swaps",
+              "name": "humidifi_solana_stg_raw_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.humidifi_solana_trades",
+              "name": "humidifi_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.jupbot_solana_bot_trades",
+              "name": "jupbot_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.jupiter_lend_solana_base_trades",
+              "name": "jupiter_lend_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.jupiter_lend_solana_stg_decoded_swaps",
+              "name": "jupiter_lend_solana_stg_decoded_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.jupiter_lend_solana_trades",
+              "name": "jupiter_lend_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.jupiter_solana_aggregator_swaps",
+              "name": "jupiter_solana_aggregator_swaps",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 0,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.jupiter_solana_amms",
+              "name": "jupiter_solana_amms",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 4,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.jupiter_solana_perp_events",
+              "name": "jupiter_solana_perp_events",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.jupiter_v4_solana_aggregator_swaps",
+              "name": "jupiter_v4_solana_aggregator_swaps",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.jupiter_v5_solana_aggregator_swaps",
+              "name": "jupiter_v5_solana_aggregator_swaps",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.jupiter_v6_solana_aggregator_swaps",
+              "name": "jupiter_v6_solana_aggregator_swaps",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.jupiter_v6_solana_swapsevent_aggregator_swaps",
+              "name": "jupiter_v6_solana_swapsevent_aggregator_swaps",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.jupiterz_solana_base_trades",
+              "name": "jupiterz_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.jupiterz_solana_trades",
+              "name": "jupiterz_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.lifinity_v1_base_trades",
+              "name": "lifinity_v1_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.lifinity_v1_stg_swaps",
+              "name": "lifinity_v1_stg_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.lifinity_v1_trades",
+              "name": "lifinity_v1_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.lifinity_v2_base_trades",
+              "name": "lifinity_v2_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.lifinity_v2_stg_swaps",
+              "name": "lifinity_v2_stg_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.lifinity_v2_trades",
+              "name": "lifinity_v2_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.lifinity_version_v1_base_trades",
+              "name": "lifinity_version_v1_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.lifinity_version_v2_base_trades",
+              "name": "lifinity_version_v2_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.looter_solana_bot_trades",
+              "name": "looter_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.maestro_solana_bot_trades",
+              "name": "maestro_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.magiceden_mmm_solana_trades",
+              "name": "magiceden_mmm_solana_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.magiceden_solana_events",
+              "name": "magiceden_solana_events",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.magiceden_v2_solana_trades",
+              "name": "magiceden_v2_solana_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.magiceden_v3_solana_trades",
+              "name": "magiceden_v3_solana_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.magnum_solana_bot_trades",
+              "name": "magnum_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.manifest_solana_base_trades",
+              "name": "manifest_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.manifest_solana_stg_raw_swaps",
+              "name": "manifest_solana_stg_raw_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.manifest_solana_trades",
+              "name": "manifest_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.meteora_v1_solana_base_trades",
+              "name": "meteora_v1_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.meteora_v1_solana_base_trades_backfill",
+              "name": "meteora_v1_solana_base_trades_backfill",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.meteora_v1_solana_stg_swaps",
+              "name": "meteora_v1_solana_stg_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.meteora_v1_solana_trades",
+              "name": "meteora_v1_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.meteora_v2_solana_base_trades",
+              "name": "meteora_v2_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.meteora_v2_solana_trades",
+              "name": "meteora_v2_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.meteora_v3_solana_base_trades",
+              "name": "meteora_v3_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.meteora_v3_solana_excluded_mints",
+              "name": "meteora_v3_solana_excluded_mints",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.meteora_v3_solana_trades",
+              "name": "meteora_v3_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.meteora_v4_solana_base_trades",
+              "name": "meteora_v4_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.meteora_v4_solana_trades",
+              "name": "meteora_v4_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.meteora_version_amm_base_trades",
+              "name": "meteora_version_amm_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 3,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.meteora_version_cpamm_base_trades",
+              "name": "meteora_version_cpamm_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.meteora_version_dlmm_base_trades",
+              "name": "meteora_version_dlmm_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.mev_x_solana_bot_trades",
+              "name": "mev_x_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.monitoring_config_spellbook_solana",
+              "name": "monitoring_config_spellbook_solana",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.nft_solana_old_trades",
+              "name": "nft_solana_old_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.nft_solana_trades",
+              "name": "nft_solana_trades",
+              "resource_type": "model",
+              "in_degree": 6,
+              "out_degree": 0,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.nova_solana_bot_trades",
+              "name": "nova_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.obric_solana_base_trades",
+              "name": "obric_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.obric_solana_stg_raw_swaps",
+              "name": "obric_solana_stg_raw_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.obric_solana_trades",
+              "name": "obric_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.oneinch_solana_fusion_created_orders",
+              "name": "oneinch_solana_fusion_created_orders",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.oneinch_solana_swaps",
+              "name": "oneinch_solana_swaps",
+              "resource_type": "model",
+              "in_degree": 3,
+              "out_degree": 0,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.oneinch_solana_transactions",
+              "name": "oneinch_solana_transactions",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.oneinch_solana_transfers",
+              "name": "oneinch_solana_transfers",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.opensea_solana_events",
+              "name": "opensea_solana_events",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.orca_whirlpool_base_trades",
+              "name": "orca_whirlpool_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.orca_whirlpool_base_trades_backfill",
+              "name": "orca_whirlpool_base_trades_backfill",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.orca_whirlpool_stg_swaps",
+              "name": "orca_whirlpool_stg_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.orca_whirlpool_token_prices",
+              "name": "orca_whirlpool_token_prices",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.orca_whirlpool_token_prices_hour",
+              "name": "orca_whirlpool_token_prices_hour",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.orca_whirlpool_trades",
+              "name": "orca_whirlpool_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.orca_whirlpool_v2_base_trades",
+              "name": "orca_whirlpool_v2_base_trades",
+              "resource_type": "model",
+              "in_degree": 2,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.orca_whirlpool_v2_stg_swaps",
+              "name": "orca_whirlpool_v2_stg_swaps",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.orca_whirlpool_v2_token_transfers",
+              "name": "orca_whirlpool_v2_token_transfers",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 2,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.orca_whirlpool_version_v1_base_trades",
+              "name": "orca_whirlpool_version_v1_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 3,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.orca_whirlpool_version_v2_base_trades",
+              "name": "orca_whirlpool_version_v2_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 3,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.padre_solana_bot_trades",
+              "name": "padre_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.padre_solana_bot_users",
+              "name": "padre_solana_bot_users",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.pancakeswap_v3_solana_base_trades",
+              "name": "pancakeswap_v3_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.pancakeswap_v3_solana_stg_swaps",
+              "name": "pancakeswap_v3_solana_stg_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.pancakeswap_v3_solana_trades",
+              "name": "pancakeswap_v3_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.pancakeswap_version_v3_base_trades",
+              "name": "pancakeswap_version_v3_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.pepe_boost_solana_bot_trades",
+              "name": "pepe_boost_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.phantom_swapper_solana_fee_addresses",
+              "name": "phantom_swapper_solana_fee_addresses",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 2,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.phantom_swapper_solana_fee_payments_raw",
+              "name": "phantom_swapper_solana_fee_payments_raw",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 2,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.phantom_swapper_solana_fee_payments_usd",
+              "name": "phantom_swapper_solana_fee_payments_usd",
+              "resource_type": "model",
+              "in_degree": 2,
+              "out_degree": 1,
+              "generation": 3,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.phantom_swapper_solana_fee_token_prices",
+              "name": "phantom_swapper_solana_fee_token_prices",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.phantom_swapper_solana_trades",
+              "name": "phantom_swapper_solana_trades",
+              "resource_type": "model",
+              "in_degree": 2,
+              "out_degree": 0,
+              "generation": 4,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.phoenix_v1_base_trades",
+              "name": "phoenix_v1_base_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 2,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.phoenix_v1_trades",
+              "name": "phoenix_v1_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.phoenix_version_1_base_trades",
+              "name": "phoenix_version_1_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.pinkpunk_solana_bot_trades",
+              "name": "pinkpunk_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.prophetbots_solana_bot_trades",
+              "name": "prophetbots_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.pumpdotfun_solana_base_trades",
+              "name": "pumpdotfun_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.pumpdotfun_solana_trades",
+              "name": "pumpdotfun_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.pumpdotfun_version_1_base_trades",
+              "name": "pumpdotfun_version_1_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.pumpswap_solana_base_trades",
+              "name": "pumpswap_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.pumpswap_solana_base_trades_backfill",
+              "name": "pumpswap_solana_base_trades_backfill",
+              "resource_type": "model",
+              "in_degree": 2,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.pumpswap_solana_pools",
+              "name": "pumpswap_solana_pools",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.pumpswap_solana_stg_decoded_swaps",
+              "name": "pumpswap_solana_stg_decoded_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.pumpswap_solana_trades",
+              "name": "pumpswap_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.pumpswap_version_1_base_trades",
+              "name": "pumpswap_version_1_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 3,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_launchlab_v1_base_trades",
+              "name": "raydium_launchlab_v1_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 2,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_launchlab_v1_stg_swaps",
+              "name": "raydium_launchlab_v1_stg_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_launchlab_v1_trades",
+              "name": "raydium_launchlab_v1_trades",
+              "resource_type": "model",
+              "in_degree": 2,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_launchlab_version_1_base_trades",
+              "name": "raydium_launchlab_version_1_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_v3_base_trades",
+              "name": "raydium_v3_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_v3_base_trades_backfill",
+              "name": "raydium_v3_base_trades_backfill",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_v3_trades",
+              "name": "raydium_v3_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_v4_base_trades",
+              "name": "raydium_v4_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_v4_base_trades_backfill",
+              "name": "raydium_v4_base_trades_backfill",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_v4_solana_stg_decoded_swaps",
+              "name": "raydium_v4_solana_stg_decoded_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_v4_trades",
+              "name": "raydium_v4_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_v5_base_trades",
+              "name": "raydium_v5_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_v5_base_trades_backfill",
+              "name": "raydium_v5_base_trades_backfill",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_v5_solana_stg_decoded_swaps",
+              "name": "raydium_v5_solana_stg_decoded_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_v5_trades",
+              "name": "raydium_v5_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.raydium_version_clmm_base_trades",
+              "name": "raydium_version_clmm_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.readyswap_solana_bot_trades",
+              "name": "readyswap_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.sanctum_router_base_trades",
+              "name": "sanctum_router_base_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.sanctum_router_trades",
+              "name": "sanctum_router_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.sanji_solana_bot_trades",
+              "name": "sanji_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.scorch_solana_base_trades",
+              "name": "scorch_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.scorch_solana_stg_raw_swaps",
+              "name": "scorch_solana_stg_raw_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.scorch_solana_trades",
+              "name": "scorch_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.shuriken_solana_bot_trades",
+              "name": "shuriken_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.sol_gun_solana_bot_trades",
+              "name": "sol_gun_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.sol_trading_bot_solana_bot_trades",
+              "name": "sol_trading_bot_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.solana_dev_table",
+              "name": "solana_dev_table",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.solana_dev_view",
+              "name": "solana_dev_view",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.solana_utils_block_leaders",
+              "name": "solana_utils_block_leaders",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 35,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.solana_utils_daily_balances",
+              "name": "solana_utils_daily_balances",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 2,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.solana_utils_epochs",
+              "name": "solana_utils_epochs",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.solana_utils_latest_balances",
+              "name": "solana_utils_latest_balances",
+              "resource_type": "model",
+              "in_degree": 2,
+              "out_degree": 0,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.solana_utils_sns_domains",
+              "name": "solana_utils_sns_domains",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.solana_utils_token_accounts",
+              "name": "solana_utils_token_accounts",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.solfi_solana_base_trades",
+              "name": "solfi_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.solfi_solana_token_transfers",
+              "name": "solfi_solana_token_transfers",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.solfi_solana_trades",
+              "name": "solfi_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.solfi_v2_solana_base_trades",
+              "name": "solfi_v2_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.solfi_v2_solana_stg_raw_swaps",
+              "name": "solfi_v2_solana_stg_raw_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.solfi_v2_solana_trades",
+              "name": "solfi_v2_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.solfi_version_1_base_trades",
+              "name": "solfi_version_1_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.soul_sniper_solana_bot_trades",
+              "name": "soul_sniper_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.soul_sniper_solana_bot_users",
+              "name": "soul_sniper_solana_bot_users",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.stabble_solana_base_trades",
+              "name": "stabble_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.stabble_solana_base_trades_backfill",
+              "name": "stabble_solana_base_trades_backfill",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.stabble_solana_stg_decoded_swaps",
+              "name": "stabble_solana_stg_decoded_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.stabble_solana_trades",
+              "name": "stabble_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.stabble_version_1_base_trades",
+              "name": "stabble_version_1_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 3,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.staking_solana_stake_account_delegations",
+              "name": "staking_solana_stake_account_delegations",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.staking_solana_stake_actions",
+              "name": "staking_solana_stake_actions",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.staking_solana_validator_stake_account_epochs",
+              "name": "staking_solana_validator_stake_account_epochs",
+              "resource_type": "model",
+              "in_degree": 2,
+              "out_degree": 0,
+              "generation": 3,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.staking_solana_validator_stake_account_epochs_raw",
+              "name": "staking_solana_validator_stake_account_epochs_raw",
+              "resource_type": "model",
+              "in_degree": 2,
+              "out_degree": 1,
+              "generation": 2,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.tensorswap_v1_solana_trades",
+              "name": "tensorswap_v1_solana_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.tensorswap_v2_solana_trades",
+              "name": "tensorswap_v2_solana_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.tessera_solana_base_trades",
+              "name": "tessera_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.tessera_solana_stg_raw_swaps",
+              "name": "tessera_solana_stg_raw_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.tessera_solana_trades",
+              "name": "tessera_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.tirador_solana_bot_trades",
+              "name": "tirador_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.tokens_solana_fees_history",
+              "name": "tokens_solana_fees_history",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.tokens_solana_net_transfers_daily",
+              "name": "tokens_solana_net_transfers_daily",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.tokens_solana_net_transfers_daily_asset",
+              "name": "tokens_solana_net_transfers_daily_asset",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.tokens_solana_nft",
+              "name": "tokens_solana_nft",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.tokens_solana_stablecoins",
+              "name": "tokens_solana_stablecoins",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.tradewiz_solana_bot_trades",
+              "name": "tradewiz_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.trojan_solana_bot_trades",
+              "name": "trojan_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.unibot_solana_bot_trades",
+              "name": "unibot_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 0,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": true,
+              "is_isolated": true
+            },
+            {
+              "id": "model.solana.whalestreet_solana_base_trades",
+              "name": "whalestreet_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.whalestreet_solana_stg_raw_swaps",
+              "name": "whalestreet_solana_stg_raw_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.whalestreet_solana_trades",
+              "name": "whalestreet_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.wifbot_solana_bot_trades",
+              "name": "wifbot_solana_bot_trades",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.zerofi_solana_base_trades",
+              "name": "zerofi_solana_base_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 1,
+              "generation": 1,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.zerofi_solana_stg_raw_swaps",
+              "name": "zerofi_solana_stg_raw_swaps",
+              "resource_type": "model",
+              "in_degree": 0,
+              "out_degree": 1,
+              "generation": 0,
+              "is_source_like_in_model_graph": true,
+              "is_sink_in_model_graph": false,
+              "is_isolated": false
+            },
+            {
+              "id": "model.solana.zerofi_solana_trades",
+              "name": "zerofi_solana_trades",
+              "resource_type": "model",
+              "in_degree": 1,
+              "out_degree": 0,
+              "generation": 7,
+              "is_source_like_in_model_graph": false,
+              "is_sink_in_model_graph": true,
+              "is_isolated": false
+            }
+          ],
+          "edges": [
+            {
+              "source": "model.solana.alpha_dex_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.alpha_dex_solana_bot_users",
+              "target": "model.solana.alpha_dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.alphaq_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.alphaq_solana_stg_raw_swaps",
+              "target": "model.solana.alphaq_solana_base_trades"
+            },
+            {
+              "source": "model.solana.aquifer_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.aquifer_solana_stg_raw_swaps",
+              "target": "model.solana.aquifer_solana_base_trades"
+            },
+            {
+              "source": "model.solana.aquifer_v2_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.aquifer_v2_solana_stg_raw_swaps",
+              "target": "model.solana.aquifer_v2_solana_base_trades"
+            },
+            {
+              "source": "model.solana.autosnipe_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.banana_gun_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.base_app_swapper_solana_fee_payments_raw",
+              "target": "model.solana.base_app_swapper_solana_fee_payments_usd"
+            },
+            {
+              "source": "model.solana.base_app_swapper_solana_fee_payments_raw",
+              "target": "model.solana.base_app_swapper_solana_fee_token_prices"
+            },
+            {
+              "source": "model.solana.base_app_swapper_solana_fee_payments_usd",
+              "target": "model.solana.base_app_swapper_solana_trades"
+            },
+            {
+              "source": "model.solana.base_app_swapper_solana_fee_token_prices",
+              "target": "model.solana.base_app_swapper_solana_fee_payments_usd"
+            },
+            {
+              "source": "model.solana.base_app_swapper_solana_stg_sol_payments",
+              "target": "model.solana.base_app_swapper_solana_fee_payments_raw"
+            },
+            {
+              "source": "model.solana.base_app_swapper_solana_stg_token_payments",
+              "target": "model.solana.base_app_swapper_solana_fee_payments_raw"
+            },
+            {
+              "source": "model.solana.base_app_swapper_solana_stg_token_payments_fees_claimed",
+              "target": "model.solana.base_app_swapper_solana_stg_token_payments"
+            },
+            {
+              "source": "model.solana.base_app_swapper_solana_stg_token_payments_fees_paid",
+              "target": "model.solana.base_app_swapper_solana_stg_token_payments"
+            },
+            {
+              "source": "model.solana.bisonfi_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.bisonfi_solana_stg_raw_swaps",
+              "target": "model.solana.bisonfi_solana_base_trades"
+            },
+            {
+              "source": "model.solana.bitfoot_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.bonkbot_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.bonkbot_solana_fee_payments_raw",
+              "target": "model.solana.bonkbot_solana_fee_payments_usd"
+            },
+            {
+              "source": "model.solana.bonkbot_solana_fee_payments_raw",
+              "target": "model.solana.bonkbot_solana_fee_token_prices"
+            },
+            {
+              "source": "model.solana.bonkbot_solana_fee_payments_usd",
+              "target": "model.solana.bonkbot_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.bonkbot_solana_fee_token_prices",
+              "target": "model.solana.bonkbot_solana_fee_payments_usd"
+            },
+            {
+              "source": "model.solana.byreal_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.byreal_solana_stg_raw_swaps",
+              "target": "model.solana.byreal_solana_base_trades"
+            },
+            {
+              "source": "model.solana.consortium_key_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.consortium_key_solana_bot_users",
+              "target": "model.solana.consortium_key_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_base_trades",
+              "target": "model.solana.dex_solana_stg_max_block_slot"
+            },
+            {
+              "source": "model.solana.dex_solana_base_trades",
+              "target": "model.solana.dex_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_stg_max_block_slot",
+              "target": "model.solana.dex_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.alphaq_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.aquifer_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.aquifer_v2_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.bisonfi_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.byreal_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.dex_solana_price_hour"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.goonfi_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.goonfi_v2_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.goosefx_ssl_v2_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.humidifi_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.jupiter_lend_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.jupiterz_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.lifinity_v1_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.lifinity_v2_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.manifest_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.meteora_v1_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.meteora_v2_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.meteora_v3_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.meteora_v4_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.obric_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.orca_whirlpool_token_prices"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.orca_whirlpool_token_prices_hour"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.orca_whirlpool_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.pancakeswap_v3_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.phoenix_v1_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.pumpdotfun_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.pumpswap_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.raydium_launchlab_v1_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.raydium_v3_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.raydium_v4_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.raydium_v5_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.sanctum_router_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.scorch_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.solfi_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.solfi_v2_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.stabble_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.tessera_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.whalestreet_solana_trades"
+            },
+            {
+              "source": "model.solana.dex_solana_trades",
+              "target": "model.solana.zerofi_solana_trades"
+            },
+            {
+              "source": "model.solana.falcon_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2020_q4"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2021_q1"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2021_q2"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2021_q3"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2021_q4"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2022_q1"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2022_q2"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2022_q3"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2022_q4"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2023_q1"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2023_q2"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2023_q3"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2023_q4"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2024_q1"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2024_q2"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2024_q3"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_2024_q4"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_limit",
+              "target": "model.solana.gas_solana_tx_fees_current"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2020_q4"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2021_q1"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2021_q2"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2021_q3"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2021_q4"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2022_q1"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2022_q2"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2022_q3"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2022_q4"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2023_q1"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2023_q2"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2023_q3"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2023_q4"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2024_q1"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2024_q2"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2024_q3"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_2024_q4"
+            },
+            {
+              "source": "model.solana.gas_solana_compute_unit_price",
+              "target": "model.solana.gas_solana_tx_fees_current"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees",
+              "target": "model.solana.gas_solana_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2020_q4",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2021_q1",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2021_q2",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2021_q3",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2021_q4",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2022_q1",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2022_q2",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2022_q3",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2022_q4",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2023_q1",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2023_q2",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2023_q3",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2023_q4",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2024_q1",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2024_q2",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2024_q3",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_2024_q4",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_tx_fees_current",
+              "target": "model.solana.gas_solana_tx_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees",
+              "target": "model.solana.gas_solana_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2020_q4",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2021_q1",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2021_q2",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2021_q3",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2021_q4",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2022_q1",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2022_q2",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2022_q3",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2022_q4",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2023_q1",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2023_q2",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2023_q3",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2023_q4",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2024_q1",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2024_q2",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_2024_q3",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.gas_solana_vote_fees_current",
+              "target": "model.solana.gas_solana_vote_fees"
+            },
+            {
+              "source": "model.solana.goonfi_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.goonfi_solana_stg_raw_swaps",
+              "target": "model.solana.goonfi_solana_base_trades"
+            },
+            {
+              "source": "model.solana.goonfi_v2_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.goonfi_v2_solana_stg_raw_swaps",
+              "target": "model.solana.goonfi_v2_solana_base_trades"
+            },
+            {
+              "source": "model.solana.goosefx_ssl_v2_solana_base_trades",
+              "target": "model.solana.goosefx_version_ssl_base_trades"
+            },
+            {
+              "source": "model.solana.goosefx_ssl_v2_solana_base_trades_backfill",
+              "target": "model.solana.goosefx_ssl_v2_solana_base_trades"
+            },
+            {
+              "source": "model.solana.goosefx_version_ssl_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.humidifi_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.humidifi_solana_stg_raw_swaps",
+              "target": "model.solana.humidifi_solana_base_trades"
+            },
+            {
+              "source": "model.solana.jupbot_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.jupiter_lend_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.jupiter_lend_solana_stg_decoded_swaps",
+              "target": "model.solana.jupiter_lend_solana_base_trades"
+            },
+            {
+              "source": "model.solana.jupiter_solana_amms",
+              "target": "model.solana.jupiter_v4_solana_aggregator_swaps"
+            },
+            {
+              "source": "model.solana.jupiter_solana_amms",
+              "target": "model.solana.jupiter_v5_solana_aggregator_swaps"
+            },
+            {
+              "source": "model.solana.jupiter_solana_amms",
+              "target": "model.solana.jupiter_v6_solana_aggregator_swaps"
+            },
+            {
+              "source": "model.solana.jupiter_solana_amms",
+              "target": "model.solana.jupiter_v6_solana_swapsevent_aggregator_swaps"
+            },
+            {
+              "source": "model.solana.jupiter_v4_solana_aggregator_swaps",
+              "target": "model.solana.jupiter_solana_aggregator_swaps"
+            },
+            {
+              "source": "model.solana.jupiter_v5_solana_aggregator_swaps",
+              "target": "model.solana.jupiter_solana_aggregator_swaps"
+            },
+            {
+              "source": "model.solana.jupiter_v6_solana_aggregator_swaps",
+              "target": "model.solana.jupiter_solana_aggregator_swaps"
+            },
+            {
+              "source": "model.solana.jupiterz_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.lifinity_v1_base_trades",
+              "target": "model.solana.lifinity_version_v1_base_trades"
+            },
+            {
+              "source": "model.solana.lifinity_v1_stg_swaps",
+              "target": "model.solana.lifinity_v1_base_trades"
+            },
+            {
+              "source": "model.solana.lifinity_v2_base_trades",
+              "target": "model.solana.lifinity_version_v2_base_trades"
+            },
+            {
+              "source": "model.solana.lifinity_v2_stg_swaps",
+              "target": "model.solana.lifinity_v2_base_trades"
+            },
+            {
+              "source": "model.solana.lifinity_version_v1_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.lifinity_version_v2_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.looter_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.maestro_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.magiceden_mmm_solana_trades",
+              "target": "model.solana.nft_solana_trades"
+            },
+            {
+              "source": "model.solana.magiceden_solana_events",
+              "target": "model.solana.nft_solana_old_trades"
+            },
+            {
+              "source": "model.solana.magiceden_v2_solana_trades",
+              "target": "model.solana.nft_solana_trades"
+            },
+            {
+              "source": "model.solana.magiceden_v3_solana_trades",
+              "target": "model.solana.nft_solana_trades"
+            },
+            {
+              "source": "model.solana.magnum_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.manifest_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.manifest_solana_stg_raw_swaps",
+              "target": "model.solana.manifest_solana_base_trades"
+            },
+            {
+              "source": "model.solana.meteora_v1_solana_base_trades",
+              "target": "model.solana.meteora_version_amm_base_trades"
+            },
+            {
+              "source": "model.solana.meteora_v1_solana_base_trades_backfill",
+              "target": "model.solana.meteora_v1_solana_base_trades"
+            },
+            {
+              "source": "model.solana.meteora_v1_solana_stg_swaps",
+              "target": "model.solana.meteora_v1_solana_base_trades_backfill"
+            },
+            {
+              "source": "model.solana.meteora_v2_solana_base_trades",
+              "target": "model.solana.meteora_version_dlmm_base_trades"
+            },
+            {
+              "source": "model.solana.meteora_v3_solana_base_trades",
+              "target": "model.solana.meteora_version_cpamm_base_trades"
+            },
+            {
+              "source": "model.solana.meteora_v3_solana_excluded_mints",
+              "target": "model.solana.meteora_v3_solana_base_trades"
+            },
+            {
+              "source": "model.solana.meteora_v4_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.meteora_version_amm_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.meteora_version_cpamm_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.meteora_version_dlmm_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.mev_x_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.nft_solana_old_trades",
+              "target": "model.solana.nft_solana_trades"
+            },
+            {
+              "source": "model.solana.obric_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.obric_solana_stg_raw_swaps",
+              "target": "model.solana.obric_solana_base_trades"
+            },
+            {
+              "source": "model.solana.oneinch_solana_fusion_created_orders",
+              "target": "model.solana.oneinch_solana_swaps"
+            },
+            {
+              "source": "model.solana.oneinch_solana_transactions",
+              "target": "model.solana.oneinch_solana_swaps"
+            },
+            {
+              "source": "model.solana.oneinch_solana_transfers",
+              "target": "model.solana.oneinch_solana_swaps"
+            },
+            {
+              "source": "model.solana.orca_whirlpool_base_trades",
+              "target": "model.solana.orca_whirlpool_version_v1_base_trades"
+            },
+            {
+              "source": "model.solana.orca_whirlpool_base_trades_backfill",
+              "target": "model.solana.orca_whirlpool_base_trades"
+            },
+            {
+              "source": "model.solana.orca_whirlpool_stg_swaps",
+              "target": "model.solana.orca_whirlpool_base_trades_backfill"
+            },
+            {
+              "source": "model.solana.orca_whirlpool_v2_base_trades",
+              "target": "model.solana.orca_whirlpool_version_v2_base_trades"
+            },
+            {
+              "source": "model.solana.orca_whirlpool_v2_stg_swaps",
+              "target": "model.solana.orca_whirlpool_v2_base_trades"
+            },
+            {
+              "source": "model.solana.orca_whirlpool_v2_token_transfers",
+              "target": "model.solana.orca_whirlpool_v2_base_trades"
+            },
+            {
+              "source": "model.solana.orca_whirlpool_v2_token_transfers",
+              "target": "model.solana.orca_whirlpool_v2_stg_swaps"
+            },
+            {
+              "source": "model.solana.orca_whirlpool_version_v1_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.orca_whirlpool_version_v2_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.padre_solana_bot_users",
+              "target": "model.solana.padre_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.pancakeswap_v3_solana_base_trades",
+              "target": "model.solana.pancakeswap_version_v3_base_trades"
+            },
+            {
+              "source": "model.solana.pancakeswap_v3_solana_stg_swaps",
+              "target": "model.solana.pancakeswap_v3_solana_base_trades"
+            },
+            {
+              "source": "model.solana.pancakeswap_version_v3_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.pepe_boost_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.phantom_swapper_solana_fee_addresses",
+              "target": "model.solana.phantom_swapper_solana_fee_payments_raw"
+            },
+            {
+              "source": "model.solana.phantom_swapper_solana_fee_addresses",
+              "target": "model.solana.phantom_swapper_solana_trades"
+            },
+            {
+              "source": "model.solana.phantom_swapper_solana_fee_payments_raw",
+              "target": "model.solana.phantom_swapper_solana_fee_payments_usd"
+            },
+            {
+              "source": "model.solana.phantom_swapper_solana_fee_payments_raw",
+              "target": "model.solana.phantom_swapper_solana_fee_token_prices"
+            },
+            {
+              "source": "model.solana.phantom_swapper_solana_fee_payments_usd",
+              "target": "model.solana.phantom_swapper_solana_trades"
+            },
+            {
+              "source": "model.solana.phantom_swapper_solana_fee_token_prices",
+              "target": "model.solana.phantom_swapper_solana_fee_payments_usd"
+            },
+            {
+              "source": "model.solana.phoenix_v1_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.phoenix_v1_base_trades",
+              "target": "model.solana.phoenix_version_1_base_trades"
+            },
+            {
+              "source": "model.solana.phoenix_version_1_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.pinkpunk_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.prophetbots_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.pumpdotfun_solana_base_trades",
+              "target": "model.solana.pumpdotfun_version_1_base_trades"
+            },
+            {
+              "source": "model.solana.pumpdotfun_version_1_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.pumpswap_solana_base_trades",
+              "target": "model.solana.pumpswap_version_1_base_trades"
+            },
+            {
+              "source": "model.solana.pumpswap_solana_base_trades_backfill",
+              "target": "model.solana.pumpswap_solana_base_trades"
+            },
+            {
+              "source": "model.solana.pumpswap_solana_pools",
+              "target": "model.solana.pumpswap_solana_base_trades_backfill"
+            },
+            {
+              "source": "model.solana.pumpswap_solana_stg_decoded_swaps",
+              "target": "model.solana.pumpswap_solana_base_trades_backfill"
+            },
+            {
+              "source": "model.solana.pumpswap_version_1_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.raydium_launchlab_v1_base_trades",
+              "target": "model.solana.raydium_launchlab_v1_trades"
+            },
+            {
+              "source": "model.solana.raydium_launchlab_v1_base_trades",
+              "target": "model.solana.raydium_launchlab_version_1_base_trades"
+            },
+            {
+              "source": "model.solana.raydium_launchlab_v1_stg_swaps",
+              "target": "model.solana.raydium_launchlab_v1_base_trades"
+            },
+            {
+              "source": "model.solana.raydium_launchlab_version_1_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.raydium_v3_base_trades",
+              "target": "model.solana.raydium_version_clmm_base_trades"
+            },
+            {
+              "source": "model.solana.raydium_v3_base_trades_backfill",
+              "target": "model.solana.raydium_v3_base_trades"
+            },
+            {
+              "source": "model.solana.raydium_v4_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.raydium_v4_base_trades_backfill",
+              "target": "model.solana.raydium_v4_base_trades"
+            },
+            {
+              "source": "model.solana.raydium_v4_solana_stg_decoded_swaps",
+              "target": "model.solana.raydium_v4_base_trades_backfill"
+            },
+            {
+              "source": "model.solana.raydium_v5_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.raydium_v5_base_trades_backfill",
+              "target": "model.solana.raydium_v5_base_trades"
+            },
+            {
+              "source": "model.solana.raydium_v5_solana_stg_decoded_swaps",
+              "target": "model.solana.raydium_v5_base_trades_backfill"
+            },
+            {
+              "source": "model.solana.raydium_version_clmm_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.readyswap_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.sanji_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.scorch_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.scorch_solana_stg_raw_swaps",
+              "target": "model.solana.scorch_solana_base_trades"
+            },
+            {
+              "source": "model.solana.shuriken_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.sol_gun_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.sol_trading_bot_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2020_q4"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2021_q1"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2021_q2"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2021_q3"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2021_q4"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2022_q1"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2022_q2"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2022_q3"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2022_q4"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2023_q1"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2023_q2"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2023_q3"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2023_q4"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2024_q1"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2024_q2"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2024_q3"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_2024_q4"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_tx_fees_current"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2020_q4"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2021_q1"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2021_q2"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2021_q3"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2021_q4"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2022_q1"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2022_q2"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2022_q3"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2022_q4"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2023_q1"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2023_q2"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2023_q3"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2023_q4"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2024_q1"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2024_q2"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_2024_q3"
+            },
+            {
+              "source": "model.solana.solana_utils_block_leaders",
+              "target": "model.solana.gas_solana_vote_fees_current"
+            },
+            {
+              "source": "model.solana.solana_utils_daily_balances",
+              "target": "model.solana.solana_utils_latest_balances"
+            },
+            {
+              "source": "model.solana.solana_utils_daily_balances",
+              "target": "model.solana.staking_solana_validator_stake_account_epochs"
+            },
+            {
+              "source": "model.solana.solana_utils_epochs",
+              "target": "model.solana.staking_solana_validator_stake_account_epochs_raw"
+            },
+            {
+              "source": "model.solana.solana_utils_token_accounts",
+              "target": "model.solana.solana_utils_latest_balances"
+            },
+            {
+              "source": "model.solana.solfi_solana_base_trades",
+              "target": "model.solana.solfi_version_1_base_trades"
+            },
+            {
+              "source": "model.solana.solfi_solana_token_transfers",
+              "target": "model.solana.solfi_solana_base_trades"
+            },
+            {
+              "source": "model.solana.solfi_v2_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.solfi_v2_solana_stg_raw_swaps",
+              "target": "model.solana.solfi_v2_solana_base_trades"
+            },
+            {
+              "source": "model.solana.solfi_version_1_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.soul_sniper_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.soul_sniper_solana_bot_users",
+              "target": "model.solana.soul_sniper_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.stabble_solana_base_trades",
+              "target": "model.solana.stabble_version_1_base_trades"
+            },
+            {
+              "source": "model.solana.stabble_solana_base_trades_backfill",
+              "target": "model.solana.stabble_solana_base_trades"
+            },
+            {
+              "source": "model.solana.stabble_solana_stg_decoded_swaps",
+              "target": "model.solana.stabble_solana_base_trades_backfill"
+            },
+            {
+              "source": "model.solana.stabble_version_1_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.staking_solana_stake_account_delegations",
+              "target": "model.solana.staking_solana_validator_stake_account_epochs_raw"
+            },
+            {
+              "source": "model.solana.staking_solana_stake_actions",
+              "target": "model.solana.staking_solana_stake_account_delegations"
+            },
+            {
+              "source": "model.solana.staking_solana_validator_stake_account_epochs_raw",
+              "target": "model.solana.staking_solana_validator_stake_account_epochs"
+            },
+            {
+              "source": "model.solana.tensorswap_v1_solana_trades",
+              "target": "model.solana.nft_solana_trades"
+            },
+            {
+              "source": "model.solana.tensorswap_v2_solana_trades",
+              "target": "model.solana.nft_solana_trades"
+            },
+            {
+              "source": "model.solana.tessera_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.tessera_solana_stg_raw_swaps",
+              "target": "model.solana.tessera_solana_base_trades"
+            },
+            {
+              "source": "model.solana.tirador_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.tradewiz_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.trojan_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.whalestreet_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.whalestreet_solana_stg_raw_swaps",
+              "target": "model.solana.whalestreet_solana_base_trades"
+            },
+            {
+              "source": "model.solana.wifbot_solana_bot_trades",
+              "target": "model.solana.dex_solana_bot_trades"
+            },
+            {
+              "source": "model.solana.zerofi_solana_base_trades",
+              "target": "model.solana.dex_solana_base_trades"
+            },
+            {
+              "source": "model.solana.zerofi_solana_stg_raw_swaps",
+              "target": "model.solana.zerofi_solana_base_trades"
+            }
+          ]
+        },
+        "data_quality_notes": [
+          "Counts and graph properties are derived from the user-provided Solana parser console output.",
+          "Generation membership is parsed from the nx.topological_generations output.",
+          "Source-like means in-degree zero in the model-only graph; dbt source resources are excluded.",
+          "Sink means out-degree zero in the model-only graph.",
+          "Non-model resources such as sources and tests are excluded.",
+          "The longest path is measured by node/edge count, not execution duration.",
+          "The generation widths are taken from the parser output; disconnected DAG components can appear at the same topological generation."
+        ],
+        "not_collected": {
+          "execution_duration": null,
+          "release_time": null,
+          "freshness_requirement": null,
+          "carbon_intensity": null,
+          "resource_demand": null,
+          "dbt_core_version": null,
+          "dbt_trino_version": null,
+          "parsed_at": null
+        }
+      }
+    }
+  }
+}
